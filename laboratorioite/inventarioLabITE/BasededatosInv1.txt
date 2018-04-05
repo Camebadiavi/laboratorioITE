@@ -1,0 +1,4 @@
+create database Inv;
+use Inv;
+create table Materiales (No int not null primary key auto_increment, Municipio varchar(20), Num_de_Activo int, Subnumero varchar(5), Descrip varchar(40), Material varchar(30), Color varchar(25), Marca varchar(20), Modelo varchar(30), Serie varchar(30), Es_Bien varchar(10)); 
+insert into Materiales (Municipio, Num_de_Activo, Subnumero, Descrip, Material, Color, Marca, Modelo, Serie, Es_Bien) values ('JUVENTINO ROSAS', 40100027, '0000', 'AIRE ACONDICIONADO', 'PLASTICO', 'BLANCO', 'YORK', 'PCC-5T.R/55000BTU', '244101659110400-413', 'BUENO');
