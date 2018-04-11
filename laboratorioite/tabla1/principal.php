@@ -24,19 +24,39 @@
 	 
 	    <tbody>
 		    <?php
-		    include 'conexion.php';
-		    $query="SELECT * FROM ejemplo";
+		    include 'coneta1.php';
+		    $query="SELECT * FROM vales";
 		    $resultado = $mysqli->query($query);
 		    if ($resultado->num_rows > 0) {
 		    while($row = $resultado->fetch_assoc()) {
-				$id=$row["id"];
-				$nombre=$row["nombre"];
-				$paterno=$row["paterno"];
-				$materno=$row["materno"];
-				echo "<tr><td class='text-center'>$id</td>";
-				echo "<td>$nombre</td>";
-				echo "<td>$paterno</td>";
-				echo "<td>$materno</td>";
+				`carrera`, `grupo`, `asig`, `laboratorio`, ``, ``, `tutor`, `resibido`, `entrega
+				$folio=$row["folio"];
+				$solicitante=$row["solicitancantidadte"];
+				$fecha=$row["fecha"];				
+				$carrera=$row["carrera"];				
+				$grupo=$row["grupo"];								
+				$asig=$row["asig"];
+				$laboratorio=$row["laboratorio"];				
+				$cantidad=$row["cantidad"];				
+				$material=$row["material"];				
+				$tutor=$row["tutor"];
+				$resibido=$row["resibido"];
+				$entrega=$row["entrega"];
+				
+				
+				
+				echo "<tr><td class='text-center' contenteditable='false'>$folio</td>";
+				echo "<td contenteditable='true'>$solicitante</td>";
+				echo "<td contenteditable='true'>$fecha</td>";
+				echo "<td contenteditable='true'>$Subnumero</td>";
+				echo "<td contenteditable='true'>$grupo</td>";
+				echo "<td contenteditable='true'>$asig</td>";
+				echo "<td contenteditable='true'>$laboratorio</td>";
+				echo "<td contenteditable='true'>$cantidad</td>";
+				echo "<td contenteditable='true'>$material</td>";
+				echo "<td contenteditable='true'>$tutor</td>";
+				echo "<td contenteditable='true'>$resibido</td>";
+				echo "<td contenteditable='true'>$entrega</td>";
 				
 				echo "<td class='text-center'><button type='button' class='btn btn-default glyphicon glyphicon-pencil btn-warning' id='m$id'></button>";
 				echo "<input value='$id' type='hidden' id='tm$id'>";	

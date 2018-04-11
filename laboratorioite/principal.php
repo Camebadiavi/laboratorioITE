@@ -24,7 +24,7 @@
 	 
 	    <tbody>
 		    <?php
-		    include 'conexion1.php';
+		    include 'conexion.php';
 		    $query="SELECT * FROM ejemplo";
 		    $resultado = $mysqli->query($query);
 		    if ($resultado->num_rows > 0) {

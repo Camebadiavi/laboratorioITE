@@ -1,0 +1,6 @@
+create database prueba;
+use prueba;
+create table ejemplo (id int not null primary key auto_increment, nombre varchar(40), paterno varchar(40), materno varchar(40));
+insert into ejemplo (nombre, paterno, materno) values ('christian', 'padilla', 'navarro');
+insert into ejemplo (nombre, paterno, materno) values ('luis', 'rey', 'lara');
+insert into ejemplo (nombre, paterno, materno) values ('rebeca', 'aguilar', 'duron');

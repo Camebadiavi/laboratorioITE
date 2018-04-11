@@ -1,0 +1,11 @@
+create database vales;
+use vales;
+create table material1(
+folio int not null primary key auto_increment, 
+solicitante varchar(120),
+fecha DATETIME(6), 
+carrera varchar(40), 
+grupo varchar(40)
+);
+alter table material1 add ( asig char(30), laboratorio char (80), cantidad varchar(40), material varchar(40), tutor char(80), resibido varchar(40), entrega DATETIME(6) not null )
+INSERT INTO `material1`(`folio`, `solicitante`, `fecha`, `carrera`, `grupo`, `asig`, `laboratorio`, `cantidad`, `material`, `tutor`, `resibido`, `entrega`) VALUES ('00001', 'Carmen Patricia Badillo Avila', '18-04-04','Ing.telematica','8B','microprocesadores', 'electronica','1','puntas','victor lauro','si','18-04-04')

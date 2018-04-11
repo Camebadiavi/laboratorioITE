@@ -54,12 +54,19 @@
 			<label for="Es_Bien" class="h4">Estado del Bien </label>
 		    <input type="text" class="form-control" id="Es_Bien" placeholder="" required>
     	</div>
-	    	<button type="button" class="btn btn-default glyphicon glyphicon-plus btn-success" id="btnAdd"> Agregar</button>
-	    	<button type="button" class="btn btn-default glyphicon glyphicon-pencil btn-warning" id="btnM"> Modificar</button>
-
+		<br>
+	    	<th class="text-center"><a href="formulario.php"><button type="button" class="btn btn-default glyphicon glyphicon-plus btn-success ">inserta</button></a></th>
+			
+	    	<button type="button" class="btn btn-default glyphicon glyphicon-pencil btn-warning" id="button">modifica</button>
+							
+				
+				<input value='$id' type='hidden' id='te$id'>		
+				<button type='button' class='btn btn-default glyphicon glyphicon-minus btn-danger' id='e$id'>elimina</button></td></tr>;
+		
     </div>
+	</br>
 <br>
-	    <table id="example" class="table table-striped table-bordered table-hover" cellspacing="0" width="100%">
+	    <table id="inv" class="table table-striped table-bordered table-hover" cellspacing="0" width="100%">
 	    <thead>
 		<tr class="h5">
 		    <th class="text-center">No.</th>
@@ -81,7 +88,7 @@
 	    <tbody>
 		    <?php
 		    include 'conexion.php';
-		    $query="SELECT * FROM materiales";
+		    $query="SELECT * FROM material1";
 		    $resultado = $mysqli->query($query);
 		    if ($resultado->num_rows > 0) {
 		    while($row = $resultado->fetch_assoc()) {
