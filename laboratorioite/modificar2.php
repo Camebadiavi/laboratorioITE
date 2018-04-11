@@ -1,5 +1,6 @@
 <?php
 
+
 $_Municipio=$_REQUEST['Municipio'];
 $_Num_de_Activo=$_REQUEST['Num_de_Activo'];
 $_Subnumero=$_REQUEST['Subnumero'];
@@ -10,11 +11,10 @@ $_Marca=$_REQUEST['Marca'];
 $_Modelo=$_REQUEST['Modelo'];
 $_Serie=$_REQUEST['Serie'];
 $_Es_Bien=$_REQUEST['Es_Bien'];
-
-//echo "$id_eliminar";
+$_No=$_REQUEST['No'];
 include 'conexion2.php';
-$query="INSERT INTO materiales (Municipio, Num_de_Activo, Subnumero, Descrip, Material, Color, Marca, Modelo, Serie, Es_Bien)
- values ('$_Municipio', '$_Num_de_Activo', '$_Subnumero', '$_Descrip','$_Material','$_Color','$_Marca', '$_Modelo', '$_Serie', '$_Es_Bien')";
+$query="UPDATE materiales set Municipio = '$_Municipio', Num_de_Activo = '$_Num_de_Activo', Subnumero = '$_Subnumero' , Descrip = '$_Descrip' , Material = '$_Material' 
+, Color = '$_Color' , Marca = '$_Marca' , Modelo = '$_Modelo' , Serie = '$_Serie' , Es_Bien = '$_Es_Bien' where No=$_No";
 $resultado = $mysqli->query($query);
 echo '<script type="text/javascript"> window.location="principalInv.php"</script>';
 ?>
